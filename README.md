@@ -1,4 +1,5 @@
 # game_motor
 
 install libraries 
-sudo apt install libx11-dev
+sudo apt install libx11-dev -y
+
