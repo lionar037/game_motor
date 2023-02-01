@@ -30,7 +30,7 @@ ARFLAGS 	:= -crs
 RANLIB		:= ranlib
 APP         := libtinyptc.a
 CCFLAGS     := -Wall -pedantic
-#CCFLAGS		+= -std=c++14
+CCFLAGS		+= -std=c++14
 CFLAGS     	:= $(CCFLAGS)
 CC          := g++
 C			:= gcc
