@@ -1,14 +1,14 @@
-.PHOY: all clean cleanall
-
+.PHONY: all clean cleanall
 
 all:
 	$(MAKE) -C tinyPTC
 	$(MAKE) -C picoPNG
 
-clear:
+clean:
 	$(MAKE) -C tinyPTC all
 	$(MAKE) -C picoPNG clean
-clearall:
+
+cleanall:
 	$(MAKE) -C tinyPTC cleanall
 	$(MAKE) -C picoPNG cleanall
 
