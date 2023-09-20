@@ -52,7 +52,7 @@ namespace ECS{
 		static constexpr uint32_t kR = 0x00FF0000;
 
         private:
-			const uint32_t m_w { 0 } , m_h { 0 };       
+			const uint32_t m_w { 0x00 } , m_h { 0x00 };       
 			std::unique_ptr<uint32_t[]> m_framebuffer{ nullptr };
 			EntityManager_t& m_EntMan;
 	};

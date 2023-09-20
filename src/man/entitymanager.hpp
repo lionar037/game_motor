@@ -7,7 +7,7 @@
 #include <vector>
 #include <cmp/entity.hpp>
 #include <cmp/physics.hpp>
-#include <util/typealiases.hpp>
+//#include <util/typealiases.hpp>
 #include <util/gamecontext.hpp>
 extern "C"
 	{
@@ -20,12 +20,11 @@ struct PhysicsComponent_t;
 
 	struct  EntityManager_t : public GameContext_t 
 	{
-		explicit EntityManager_t()
-		{
+		explicit EntityManager_t(){
 				std::cout << " EntityManager_t() \n" ;
 		};
-		~EntityManager_t()
-		{
+
+		~EntityManager_t(){
 				std::cout << " ~EntityManager_t() \n" ;
 
 			ptc_close();
@@ -39,25 +38,26 @@ struct PhysicsComponent_t;
 		void createEntity(uint32_t x,uint32_t y,uint32_t c, uint32_t d,uint32_t color)
 		{
 			std::cout << "  createEntity( uint32_t ,uint32_t ,uint32_t, uint32_t , std::string) \n" ;
-				ptc_open("Game" , x , y );
+			ptc_open("Game" , x , y );
+
 		};
 
 		void createEntity(uint32_t x,uint32_t y,std::string str)
 		{
 				std::cout << "  createEntity( uint32_t ,uint32_t , std::string) \n" ;
 				
+		auto& e =m_Entity.emplace_back(str);
 
-				
-				//auto& e =m_Entity.emplace_back(str);
-
-		//auto& ph = m_components.createPhysicsComponent();
-		//e.phy = &ph;
+		 auto& ph = ph_c.createPhysicsComponent();
+		 //e.phy = &ph;
 		//ph.x = x; 
-		//ph.y = y;
+		 //ph.y = y;
 
 		};
+		
 
 		 Vect_t<Entity_t> m_Entity { } ;
+		 PhysicsComponent_t ph_c;
 		 std::vector<PhysicsComponent_t> pc;
 	};
 

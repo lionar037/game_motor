@@ -24,21 +24,21 @@ struct  PhysicsComponent_t;
 		}
 
 
-				explicit Entity_t(std::string_view filename )
+		explicit Entity_t(std::string_view filename )
 		{
 			std::vector <unsigned char>pixels{};
 			unsigned long dw{0},dh{0};
 			std::ifstream file(filename.data() ,std::ios::binary);
 
 
-			std::vector<unsigned char> filevec(
+		std::vector<unsigned char> filevec(
 					std::istreambuf_iterator<char>{file}
 				,	std::istreambuf_iterator<char>{}
 				
 			);
 
 
-			decodePNG(pixels ,dw,dh,filevec.data() , filevec.size());
+		decodePNG(pixels ,dw,dh,filevec.data() , filevec.size());
 				sprite.resize(pixels.size()/4);
 				std::memcpy(sprite.data() , pixels.data() , pixels.size());
 				w=dw;
@@ -56,7 +56,7 @@ struct  PhysicsComponent_t;
 			 	std::vector<unsigned char> filevec( std::istreambuf_iterator<char>{file} , std::istreambuf_iterator<char>{}
 				 );
 
-			decodePNG( pixels , dw , dh , filevec.data(), filevec.size());
+		decodePNG( pixels , dw , dh , filevec.data(), filevec.size());
 
 			 w=dw;	h=dh;
 			 sprite.reserve(pixels.size()/4);

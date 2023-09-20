@@ -3,8 +3,8 @@
 #include <vector>
 #include <string>
 //#include <picoPNG/src/picopng.hpp>
-#include <cmp/component.hpp>
-#include <util/typealiases.hpp>
+//#include <cmp/component.hpp>
+//#include <util/typealiases.hpp>
 
 
 namespace ECS{

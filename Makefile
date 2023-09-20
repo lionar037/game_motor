@@ -49,9 +49,9 @@ endif
 
 
 ALLCPPS 	:= $(shell find src/ -type f -iname *.cpp)
-#ALLOCPPSOBJ  	:= $(patsubst %.cpp,%.o,$(ALLCPPS))
+ALLOCPPSOBJ  	:= $(patsubst %.cpp,%.o,$(ALLCPPS))
 ALLCS		:= $(shell find src/ -type f -iname *.c)
-#ALLCSOBJ	:= $(patsubst %.c,%.o,$(ALLCS))
+ALLCSOBJ	:= $(patsubst %.c,%.o,$(ALLCS))
 SUBDIRS 	:= $(shell find $(SRC) -type d)
 OBJSUBDIRS 	:= $(patsubst $(SRC)%,$(OBJ)%,$(SUBDIRS))
 ALLOBJ 		:= $(foreach F,$(ALLCPPS) $(ALLCS),$(call C2O,$(F)))

@@ -3,7 +3,7 @@
 #include <cmp/component.hpp>
 namespace ECS{
 
-//struct Component_t ;
+struct Component_t ;
 
     struct  PhysicsComponent_t :public Component_t
     {
@@ -13,6 +13,9 @@ namespace ECS{
             std::cout << " PhysicsComponent_t( EntityID_t ) \n\t- Component_t { }\n" ;
 
         };
+        const uint32_t createPhysicsComponent(){
+            return 0x40;
+        }
 
         uint32_t x {0} , y {0};
         uint32_t vx {1} , vy {1};

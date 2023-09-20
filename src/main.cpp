@@ -20,11 +20,12 @@ int main(void){
   
    try{
         ECS::EntityManager_t entityMan;
+
+        
         entityMan.createEntity(320,240,16,16,0x00ff00ff);
-
+/*
         entityMan.createEntity(80,10,"assets/ninja.png");
-        //entityMan.createEntity(200,70,"assets/ninja.png");
-
+      
         const ECS::RenderSystem_t render{ kSCRWIDTH , kSCRHEIGHT , entityMan };
         
        // ECS::PhysicsSystem_t Physics;
@@ -38,7 +39,7 @@ int main(void){
           //render.update(entityMan);
          //Physics.update(entityMan);
          //Collision.update(entityMan);
-        }
+        }*/
    }
    catch(...){
      std::cout<< "break program"<<std::endl;
