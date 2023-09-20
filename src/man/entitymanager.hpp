@@ -7,7 +7,7 @@
 #include <vector>
 #include <cmp/entity.hpp>
 #include <cmp/physics.hpp>
-//#include <util/typealiases.hpp>
+#include <util/typealiases.hpp>
 #include <util/gamecontext.hpp>
 extern "C"
 	{
@@ -46,9 +46,9 @@ struct PhysicsComponent_t;
 		{
 				std::cout << "  createEntity( uint32_t ,uint32_t , std::string) \n" ;
 				
-		auto& e =m_Entity.emplace_back(str);
+		//auto& e =m_Entity.emplace_back(str);
 
-		 auto& ph = ph_c.createPhysicsComponent();
+		 //auto& ph = ph_c.createPhysicsComponent();
 		 //e.phy = &ph;
 		//ph.x = x; 
 		 //ph.y = y;
@@ -57,7 +57,7 @@ struct PhysicsComponent_t;
 		
 
 		 Vect_t<Entity_t> m_Entity { } ;
-		 PhysicsComponent_t ph_c;
+		 PhysicsComponent_t ph_c{0};
 		 std::vector<PhysicsComponent_t> pc;
 	};
 

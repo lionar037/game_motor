@@ -1,16 +1,16 @@
 // https://www.youtube.com/watch?v=exvGWo1PRfA&list=PLmxqg54iaXrhTqZxylLPo0nov0OoyJqiS&index=32
 //
 extern "C" {
-    #include <tinyPTC/src/tinyptc.h>
+  //  #include <tinyPTC/src/tinyptc.h>
   }
 #include <cstdint>
 #include <iostream>
-#include <memory>
+//#include <memory>
 #include <man/entitymanager.hpp>
-#include <util/gamecontext.hpp>
-#include <sys/collision.hpp>
-#include <sys/physics.hpp>
-#include <sys/rendersystem.hpp>
+// #include <util/gamecontext.hpp>
+// #include <sys/collision.hpp>
+// #include <sys/physics.hpp>
+// #include <sys/rendersystem.hpp>
 
 
 constexpr uint32_t kSCRWIDTH { 640 };

@@ -13,9 +13,12 @@ struct Component_t ;
             std::cout << " PhysicsComponent_t( EntityID_t ) \n\t- Component_t { }\n" ;
 
         };
-        const uint32_t createPhysicsComponent(){
-            return 0x40;
-        }
+
+
+        // auto& uint32_t createPhysicsComponent(){
+        //     Component_t c;
+        //    return c;
+        // }
 
         uint32_t x {0} , y {0};
         uint32_t vx {1} , vy {1};

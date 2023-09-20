@@ -36,6 +36,8 @@ namespace ECS{
 			
 			return 1;
 		};
+
+
 		bool update() const
 		{
 			if(!ptc_process_events() ){
@@ -52,8 +54,9 @@ namespace ECS{
 		static constexpr uint32_t kR = 0x00FF0000;
 
         private:
+			EntityManager_t& m_EntMan;
 			const uint32_t m_w { 0x00 } , m_h { 0x00 };       
 			std::unique_ptr<uint32_t[]> m_framebuffer{ nullptr };
-			EntityManager_t& m_EntMan;
+
 	};
 }//end namespace ECS

@@ -5,7 +5,7 @@ all:
 	$(MAKE) -C picoPNG
 
 clean:
-	$(MAKE) -C tinyPTC all
+	$(MAKE) -C tinyPTC clean
 	$(MAKE) -C picoPNG clean
 
 cleanall:
