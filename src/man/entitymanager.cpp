@@ -1,10 +1,3 @@
-// #include <memory>
-// #include <string>
-// #include <vector>
-// #include <cmp/entity.hpp>
-// #include <cmp/physics.hpp>
-// #include <util/typealiases.hpp>
-// #include <util/gamecontext.hpp>
 
 #include <man/entitymanager.hpp>
 
@@ -30,14 +23,26 @@ void EntityManager_t::createEntity(uint32_t x,uint32_t y,uint32_t c, uint32_t d,
 		{
 				std::cout << "  createEntity( uint32_t ,uint32_t , std::string) \n" ;
 				
-		//auto& e =m_Entity.emplace_back(str);
+		auto& e =m_Entity.emplace_back(str);
 
-		 //auto& ph = ph_c.createPhysicsComponent();
-		 //e.phy = &ph;
+		// auto& ph = ph_c.createPhysicsComponent();
+		//e.phy = &ph;
 		//ph.x = x; 
-		 //ph.y = y;
+		//ph.y = y;
 
 		};
+
+				EntityManager_t::~EntityManager_t(){
+				std::cout << " ~EntityManager_t() \n" ;
+
+			ptc_close();
+		};
+
+
+			 EntityManager_t::EntityManager_t(){
+				std::cout << " EntityManager_t() \n" ;
+		};
+
 		
 
 }
