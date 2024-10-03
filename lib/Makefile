@@ -1,8 +1,8 @@
 .PHONY: all clean cleanall
 
 all:
-	$(MAKE) -C tinyPTC
-	$(MAKE) -C picoPNG
+	$(MAKE) -C tinyPTC/
+	$(MAKE) -C picoPNG/
 
 clean:
 	$(MAKE) -C tinyPTC clean

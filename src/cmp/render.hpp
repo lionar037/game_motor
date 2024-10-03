@@ -7,7 +7,11 @@
 //#include <util/typealiases.hpp>
 
 
+
+
 namespace ECS{
+
+struct Component_t;
 
 	struct RenderComponent_t : public Component_t
 	{
@@ -20,7 +24,5 @@ namespace ECS{
 
 		uint32_t w { 0 } , h { 0 };
 		std::vector<uint32_t>sprite{};
-		
-	
 	};
 }

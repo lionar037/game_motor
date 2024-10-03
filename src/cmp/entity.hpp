@@ -34,7 +34,7 @@ struct  PhysicsComponent_t;
 		std::vector<unsigned char> filevec(
 					std::istreambuf_iterator<char>{file}
 				,	std::istreambuf_iterator<char>{}
-				
+
 			);
 
 

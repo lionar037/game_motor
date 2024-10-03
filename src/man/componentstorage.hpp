@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 
-namespace ECS 
+namespace ECS
 {
     struct ComponentStorage_t
     {

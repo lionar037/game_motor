@@ -16,12 +16,12 @@ namespace ECS{
 	//foward declaration
 	struct EntityManager_t;
 	struct GameContext_t;
-	
+
 
 	struct RenderSystem_t
 	{
 	explicit RenderSystem_t(uint32_t x ,uint32_t y,EntityManager_t& em )
-	: m_h (x) , m_w(y) , m_EntMan{em} 
+	:  m_w(y) , m_h (x) , m_EntMan{em}
 	{
 		std::cout << " RenderSystem_t() \n" ;
 	};
@@ -33,7 +33,7 @@ namespace ECS{
 		};
 
 		bool update(const GameContext_t& gamecontext) const{
-			
+
 			return 1;
 		};
 
@@ -50,12 +50,13 @@ namespace ECS{
 
 		void drawAllEntities(const Vect_t<Entity_t>&)const;
 		void drawEntity(const Entity_t&)const;
-		
+
 		static constexpr uint32_t kR = 0x00FF0000;
 
         private:
+			//EntityManager_t& m_EntMan;
+			const uint32_t m_w { 0x00 } , m_h { 0x00 };
 			EntityManager_t& m_EntMan;
-			const uint32_t m_w { 0x00 } , m_h { 0x00 };       
 			std::unique_ptr<uint32_t[]> m_framebuffer{ nullptr };
 
 	};
